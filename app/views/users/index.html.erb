@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users Index</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+
+    <% if @users.blank? %>
+      <h3>There are no users in the DB</h3>
+    <% else %>
+      <% @users.each do |user| %>
+        <h4><%= user.first_name %></h4>
+        <h4><%= user.last_name %></h4>
+        <p><%= user.email %></p>
+      <% end %>
+    <% end %>
+  </body>
+</html>
