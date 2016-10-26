@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h2>Welcome</h2>
+    <h5>Create new user</h5>
+
+    <%= form_tag api_users_path, method: :post do %>
+      <%= label_tag :first_name, "First Name" %>
+      <%= text_field_tag :first_name %>
+      <%= label_tag :last_name, "Last Name" %>
+      <%= text_field_tag :last_name %>
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email %>
+      <%= label_tag :social_security_number, "SSN" %>
+      <%= text_field_tag :social_security_number %>
+      <%= submit_tag "Submit" %>
+    <% end %>
+  </body>
+</html>
